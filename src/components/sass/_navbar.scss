@@ -1,0 +1,112 @@
+.nav {
+  width: 100%;
+  justify-content: space-between;
+  height: 7rem;
+  padding: 0 10rem;
+
+  &__logo {
+    .logo {
+      img {
+        height: 6rem;
+      }
+    }
+  }
+  &__items {
+    align-items: center;
+    gap: 2.5rem;
+
+    &--search {
+      line-height: 8rem;
+      width: 50rem;
+      margin-right: 1rem;
+
+      .search-box {
+        height: 4rem;
+        width: 80%;
+        padding: 1rem;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+        border: 1px solid $color-primary;
+        text-transform: capitalize;
+        background: none;
+        outline: none;
+      }
+      .search-box::placeholder {
+        color: $color-primary;
+        font-family: "Poppins", sans-serif;
+        font-size: 1.5rem;
+      }
+      .search-btn {
+        height: 4rem;
+        width: 20%;
+        border: 0;
+        outline: none;
+        cursor: pointer;
+        background: $color-primary;
+        color: #e7e7e7;
+        text-transform: capitalize;
+        font-size: 1.5rem;
+        border-top-right-radius: 1rem;
+        font-family: "Poppins", sans-serif;
+      }
+    }
+    .icons {
+      color: $color-primary;
+      margin-right: 1rem;
+
+      &:hover {
+        transform: translate(0, -0.2rem);
+        transition: all 0.5s;
+      }
+    }
+  }
+}
+.hor-line {
+  border: 0.25px solid $color-primary-light;
+}
+.navbar {
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0;
+    gap: 2rem;
+
+    &--item {
+      .item-hyperlink {
+        font-size: 1.5rem;
+        color: $color-primary;
+        opacity: 0.7;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -0.3rem;
+          left: 0;
+          width: 0;
+          height: 3px;
+          background-color: $color-primary;
+          transition: width 0.35s ease-in-out;
+        }
+
+        &:hover {
+          opacity: 1;
+          color: $color-primary;
+
+          &::before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+.navigation {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  background: #e7e7e7;
+}

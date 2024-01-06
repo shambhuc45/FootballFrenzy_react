@@ -1,29 +1,70 @@
-import React from 'react';
-import logo from './images/logob.png';
-import profile from './images/profile.png';
-import cart from './images/cart.png';
-import './css/nav.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Icon } from "@iconify/react";
 
 export default function Navbar() {
   return (
-      <><div className="nav">
-        <a href="index.html">
-            <img src={logo} className="brand-logo" alt='Loading..'></img></a>
-            <div className="nav-items">
-       <div className="search">
-           <input type="text" className="search-box" placeholder="Search Item Here"></input>
-           <button className="search-btn">Search</button>
-       </div>
-       <a href="#"><img src={profile} height="40px" alt='Loading...' ></img></a>
-       <a href="#"><img src={cart} height="40px"  alt='Loading...'></img></a>
+    <>
+      <div className="navigation">
+        <div className="nav flex">
+          <div className="nav__logo">
+            <Link to="/" className="logo">
+              <img src="logo.png" alt="Frenzy Logo" />
+            </Link>
+          </div>
+          <div className="nav__items flex">
+            <div className="nav__items--search">
+              <input
+                id="search-box"
+                type="text"
+                className="search-box"
+                placeholder="Search Item Here"
+              ></input>
+              <button className="search-btn">Search</button>
+            </div>
+            <Link to="/">
+              <Icon className="icons" icon="bytesize:cart" width="3.5rem" />
+            </Link>
+            <Link to="/">
+              <Icon
+                className="icons"
+                icon="iconoir:profile-circle"
+                width="3.5rem"
+              />
+            </Link>
+          </div>
+        </div>
+        <nav className="navbar">
+          <hr className="hor-line" />
+          <ul className="navbar__list">
+            <li className="navbar__list--item">
+              <Link to="/" className="item-hyperlink">
+                Home
+              </Link>
+            </li>
+            <li className="navbar__list--item">
+              <Link to="/club" className="item-hyperlink">
+                Club
+              </Link>
+            </li>
+            <li className="navbar__list--item">
+              <Link to="/national" className="item-hyperlink">
+                National
+              </Link>
+            </li>
+            <li className="navbar__list--item">
+              <Link to="/cases" className="item-hyperlink">
+                Phone Cases
+              </Link>
+            </li>
+            <li className="navbar__list--item">
+              <Link to="/ornament" className="item-hyperlink">
+                Ornaments
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </div>
-    <ul className="links-container">
-    <li className="list-items"><a href="#" className="link">Home</a></li>
-    <li className="list-items"><a href="#" className="link">Club</a></li>
-    <li className="list-items"><a href="#" className="link">National</a></li>
-    <li className="list-items"><a href="#" className="link">Phone Cases</a></li>
-    </ul>
     </>
-  )
+  );
 }

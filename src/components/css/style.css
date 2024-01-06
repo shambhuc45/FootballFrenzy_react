@@ -99,7 +99,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image:linear-gradient(rgba(0,0,0,0.4),#3551b5), url(images/Campnou2.png);
+    background-image:linear-gradient(rgba(0,0,0,0.4),#3551b5);
+    
 }
 .hero-section .logo{
     height: 150px;

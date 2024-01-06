@@ -1,0 +1,26 @@
+.services {
+  h4 {
+    margin-bottom: 1rem;
+  }
+}
+.card {
+  width: 10rem;
+  background-color: $color-primary-light;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem 0.25rem 1rem;
+  margin-right: 1rem;
+
+  .icon {
+    .service-icon {
+      color: white;
+      margin-bottom: -0.25rem;
+    }
+  }
+
+  .title {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 500;
+    line-height: 1.8rem;
+  }
+}
