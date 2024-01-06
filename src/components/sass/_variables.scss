@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@500&family=Playfair+Display:wght@600&family=Poppins&family=Roboto+Condensed:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+  background: #e7e7e7;
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+  @include respond(phone) {
+    font-size: 31.25%;
+  }
+}
+
+$color-primary: #125496;
+$color-primary-light: #4fbee0;
+$color-secondary: #ec425b;
+$color-black-light: #383833;
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.absolute {
+  position: absolute;
+}
+
+.row {
+  padding: 0 7rem;
+}
+
+.relative {
+  position: relative;
+}
+.white {
+  color: white;
+}
+.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.z-50 {
+  z-index: 500;
+}
+
+.flex {
+  display: flex;
+}
+
+.margin-bottom-small {
+  margin-bottom: 1.8rem;
+}
+
+.margin-bottom-medium {
+  margin-bottom: 4rem;
+}
+
+.margin-bottom-large {
+  margin-bottom: 8rem;
+}
+.margin-top-large {
+  margin-top: 8rem;
+}
+.margin-horizontal {
+  margin: 1rem auto;
+}
+.margin-bottom-5 {
+  margin-bottom: 5rem;
+}
+.margin-top-medium {
+  margin-top: 4rem;
+}
+.col-50 {
+  float: left;
+  width: 50%;
+}
+
+.text-center {
+  text-align: center;
+}
+.center-head {
+  align-items: center;
+}
+ul {
+  padding: 0;
+}
+.heading-primary {
+  color: $color-primary;
+  text-transform: uppercase;
+}

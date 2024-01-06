@@ -1,0 +1,46 @@
+.categories {
+  margin-top: 2rem;
+  min-height: 25rem;
+
+  &__container {
+    margin: 2rem 0;
+
+    &--btngroup {
+      .btn-category {
+        margin: 0 2rem 2rem 0;
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        border: 2px solid $color-primary;
+        transition: all 0.7s;
+        background: transparent;
+        color: $color-primary;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+          color: white;
+          background: $color-primary-light;
+          border: 2px solid $color-primary-light;
+          transition: all 0.7s;
+        }
+      }
+      .active {
+        color: white;
+        background: $color-secondary;
+        border: 2px solid $color-secondary;
+        clip-path: polygon(0 0, 89% 0, 100% 50%, 89% 100%, 0 100%);
+
+        &:hover {
+          color: white;
+          background: $color-secondary;
+          border: 2px solid $color-secondary;
+        }
+      }
+    }
+  }
+}
+.product {
+  flex-wrap: wrap;
+  align-items: center;
+}

@@ -1,10 +1,15 @@
-import './App.css';
-import Navbar from './components/Navbar';
+import Home from "./components/pages/Home";
+import Layout from "./components/Layout";
+import Router from "./components/Router/Router";
 
 function App() {
   return (
     <>
-    <Navbar></Navbar>
+      <Router>
+        <Layout>
+          <Home />
+        </Layout>
+      </Router>
     </>
   );
 }

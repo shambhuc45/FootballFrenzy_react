@@ -1,13 +1,456 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@500&family=Playfair+Display:wght@600&family=Poppins&family=Roboto+Condensed:wght@400;500;700&display=swap");
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+  background: #e7e7e7;
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 37.5em) {
+  html {
+    font-size: 31.25%;
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.row {
+  padding: 0 7rem;
+}
+
+.relative {
+  position: relative;
+}
+
+.white {
+  color: white;
+}
+
+.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.z-50 {
+  z-index: 500;
+}
+
+.flex {
+  display: flex;
+}
+
+.margin-bottom-small {
+  margin-bottom: 1.8rem;
+}
+
+.margin-bottom-medium {
+  margin-bottom: 4rem;
+}
+
+.margin-bottom-large {
+  margin-bottom: 8rem;
+}
+
+.margin-top-large {
+  margin-top: 8rem;
+}
+
+.margin-horizontal {
+  margin: 1rem auto;
+}
+
+.margin-bottom-5 {
+  margin-bottom: 5rem;
+}
+
+.margin-top-medium {
+  margin-top: 4rem;
+}
+
+.col-50 {
+  float: left;
+  width: 50%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.center-head {
+  align-items: center;
+}
+
+ul {
+  padding: 0;
+}
+
+.heading-primary {
+  color: #125496;
+  text-transform: uppercase;
+}
+
+.nav {
+  width: 100%;
+  justify-content: space-between;
+  height: 7rem;
+  padding: 0 10rem;
+}
+.nav__logo .logo img {
+  height: 6rem;
+}
+.nav__items {
+  align-items: center;
+  gap: 2.5rem;
+}
+.nav__items--search {
+  line-height: 8rem;
+  width: 50rem;
+  margin-right: 1rem;
+}
+.nav__items--search .search-box {
+  height: 4rem;
+  width: 80%;
+  padding: 1rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border: 1px solid #125496;
+  text-transform: capitalize;
+  background: none;
+  outline: none;
+}
+.nav__items--search .search-box::placeholder {
+  color: #125496;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+}
+.nav__items--search .search-btn {
+  height: 4rem;
+  width: 20%;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  background: #125496;
+  color: #e7e7e7;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  border-top-right-radius: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+.nav__items .icons {
+  color: #125496;
+  margin-right: 1rem;
+}
+.nav__items .icons:hover {
+  transform: translate(0, -0.2rem);
+  transition: all 0.5s;
+}
+
+.hor-line {
+  border: 0.25px solid #4fbee0;
+}
+
+.navbar__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0;
+  gap: 2rem;
+}
+.navbar__list--item .item-hyperlink {
+  font-size: 1.5rem;
+  color: #125496;
+  opacity: 0.7;
+  position: relative;
+}
+.navbar__list--item .item-hyperlink::before {
+  content: "";
+  position: absolute;
+  bottom: -0.3rem;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #125496;
+  transition: width 0.35s ease-in-out;
+}
+.navbar__list--item .item-hyperlink:hover {
+  opacity: 1;
+  color: #125496;
+}
+.navbar__list--item .item-hyperlink:hover::before {
+  width: 100%;
+}
+
+.navigation {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  background: #e7e7e7;
+}
+
+.section-hero {
+  height: max-content;
+  width: 100%;
+  height: 80vh;
+}
+.section-hero__content {
+  padding: 0 8rem;
+}
+.section-hero__content--text .about-heading {
+  color: #125496;
+  text-transform: uppercase;
+}
+.section-hero__content--text .about__content--btn {
+  margin: 1rem 0;
+}
+.section-hero__content--image {
+  height: max-content;
+  margin-top: 2rem;
+}
+.section-hero__content--image img {
+  height: 45rem;
+}
+
+.btn-primary {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: 2px solid #125496;
+  transition: all 0.7s;
+  background: transparent;
+  color: #125496;
+  align-items: center;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  color: white;
+  background: #ec425b;
+  border: 2px solid #ec425b;
+  transition: all 0.7s;
+  clip-path: polygon(0 0, 89% 0, 100% 50%, 89% 100%, 0 100%);
+}
+
+.typewriter {
+  width: 100%;
+  padding: 1rem 0;
+}
+.typewriter .changing-text {
+  color: #ec425b;
+  font-weight: bolder;
+}
+
+.composition {
+  position: relative;
+  width: 100%;
+  height: max-content;
+}
+.composition .composition-image {
+  position: absolute;
+  border-radius: 2px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  z-index: 9;
+  transition: all 0.3s;
+  width: 20rem;
+  height: auto;
+  outline-offset: 0.9rem;
+}
+.composition .composition-image:hover {
+  transform: scale(1.08);
+  z-index: 12;
+  outline: 0.65rem solid #4fbee0;
+}
+.composition:hover .composition-image:not(:hover) {
+  transform: scale(0.93);
+  opacity: 0.9;
+}
+.composition .composition-image-pic1 {
+  left: 30%;
+  top: 10rem;
+  z-index: 11;
+}
+.composition .composition-image-pic2 {
+  left: 9%;
+  top: 20rem;
+}
+.composition .composition-image-pic3 {
+  left: 9%;
+  top: 0;
+}
+.composition .composition-image-pic4 {
+  right: 9%;
+  top: 0;
+  z-index: 10;
+}
+.composition .composition-image-pic5 {
+  right: 9%;
+  top: 22rem;
+}
+
+.hor-line-about {
+  margin: 8rem 0 1rem 0;
+}
+
+.hor-line-small {
+  border: 1.5px solid #125496;
+  width: 6rem;
+  color: #125496;
+}
+
+.services h4 {
+  margin-bottom: 1rem;
+}
+
+.card {
+  width: 10rem;
+  background-color: #4fbee0;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem 0.25rem 1rem;
+  margin-right: 1rem;
+}
+.card .icon .service-icon {
+  color: white;
+  margin-bottom: -0.25rem;
+}
+.card .title {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 500;
+  line-height: 1.8rem;
+}
+
+.categories {
+  margin-top: 2rem;
+  min-height: 25rem;
+}
+.categories__container {
+  margin: 2rem 0;
+}
+.categories__container--btngroup .btn-category {
+  margin: 0 2rem 2rem 0;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: 2px solid #125496;
+  transition: all 0.7s;
+  background: transparent;
+  color: #125496;
+  align-items: center;
+  cursor: pointer;
+}
+.categories__container--btngroup .btn-category:hover {
+  color: white;
+  background: #4fbee0;
+  border: 2px solid #4fbee0;
+  transition: all 0.7s;
+}
+.categories__container--btngroup .active {
+  color: white;
+  background: #ec425b;
+  border: 2px solid #ec425b;
+  clip-path: polygon(0 0, 89% 0, 100% 50%, 89% 100%, 0 100%);
+}
+.categories__container--btngroup .active:hover {
+  color: white;
+  background: #ec425b;
+  border: 2px solid #ec425b;
+}
+
+.product {
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.product__card {
+  width: 19rem;
+  height: auto;
+  background-color: #f2f2f2;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: 0.4s;
+  margin: 2rem;
+  padding: 2rem 0;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+.product__card:hover {
+  transform: translate(0px, -8px);
+}
+.product__card--image {
+  text-align: center;
+}
+.product__card--image img {
+  width: 15rem;
+  height: 16rem;
+  object-fit: cover;
+  object-position: center;
+}
+.product__card--info {
+  text-align: center;
+}
+.product__card--info .product-name {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #125496;
+  font-size: 1.5rem;
+  letter-spacing: -0.05rem;
+}
+.product__card--info .actual-price {
+  font-size: 1.5rem;
+  text-decoration: line-through;
+  color: #ec425b;
+  margin-right: 0.5rem;
+}
+.product__card--info .price {
+  font-size: 1.3rem;
+  color: #125496;
+}
+
+.tag {
+  right: 0.5rem;
+  top: -1rem;
+  background: #ec425b;
+  color: white;
+  padding: 0 0.5rem;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.rating {
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  color: goldenrod;
+  line-height: 1.1;
+}
+.rating span {
+  color: #125496;
 }
