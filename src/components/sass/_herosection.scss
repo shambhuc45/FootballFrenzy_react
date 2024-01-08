@@ -7,11 +7,6 @@
     padding: 0 8rem;
 
     &--text {
-      .about-heading {
-        color: $color-primary;
-        text-transform: uppercase;
-      }
-
       .about__content--btn {
         margin: 1rem 0;
       }
@@ -24,25 +19,6 @@
         height: 45rem;
       }
     }
-  }
-}
-.btn-primary {
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
-  font-weight: 600;
-  border: 2px solid $color-primary;
-  transition: all 0.7s;
-  background: transparent;
-  color: $color-primary;
-  align-items: center;
-  cursor: pointer;
-
-  &:hover {
-    color: white;
-    background: $color-secondary;
-    border: 2px solid $color-secondary;
-    transition: all 0.7s;
-    clip-path: polygon(0 0, 89% 0, 100% 50%, 89% 100%, 0 100%);
   }
 }
 .typewriter {
