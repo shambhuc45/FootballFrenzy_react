@@ -542,7 +542,7 @@ ul {
   transform: scale(1.2);
 }
 .footer__logo img {
-  height: 17rem;
+  height: 16rem;
 }
 .footer .pay-methods {
   justify-content: left;
@@ -560,7 +560,7 @@ ul {
 }
 
 .btn-top {
-  margin-left: 20rem;
+  margin-left: 50%;
   margin-top: 2rem;
   height: 3rem;
   width: 3rem;
