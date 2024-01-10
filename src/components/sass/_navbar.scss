@@ -16,7 +16,7 @@
     gap: 2.5rem;
 
     &--search {
-      line-height: 8rem;
+      line-height: 7rem;
       width: 50rem;
       margin-right: 1rem;
 
@@ -45,7 +45,6 @@
         background: $color-primary;
         color: #e7e7e7;
         text-transform: capitalize;
-        font-size: 1.5rem;
         border-top-right-radius: 1rem;
         font-family: "Poppins", sans-serif;
       }
@@ -86,7 +85,7 @@
           left: 0;
           width: 0;
           height: 3px;
-          background-color: $color-primary;
+          background-color: $color-primary-light;
           transition: width 0.35s ease-in-out;
         }
 
