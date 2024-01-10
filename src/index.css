@@ -116,6 +116,7 @@ ul {
   background-clip: border-box;
   -webkit-background-clip: text;
   color: transparent;
+  font-size: 3rem;
 }
 
 .btn-primary {
@@ -134,7 +135,7 @@ ul {
   background: #ec425b;
   border: 2px solid #ec425b;
   transition: all 0.7s;
-  clip-path: polygon(0 0, 89% 0, 100% 50%, 89% 100%, 0 100%);
+  clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
 }
 
 .nav {
@@ -151,7 +152,7 @@ ul {
   gap: 2.5rem;
 }
 .nav__items--search {
-  line-height: 8rem;
+  line-height: 7rem;
   width: 50rem;
   margin-right: 1rem;
 }
@@ -180,7 +181,6 @@ ul {
   background: #125496;
   color: #e7e7e7;
   text-transform: capitalize;
-  font-size: 1.5rem;
   border-top-right-radius: 1rem;
   font-family: "Poppins", sans-serif;
 }
@@ -217,7 +217,7 @@ ul {
   left: 0;
   width: 0;
   height: 3px;
-  background-color: #125496;
+  background-color: #4fbee0;
   transition: width 0.35s ease-in-out;
 }
 .navbar__list--item .item-hyperlink:hover {
@@ -249,8 +249,11 @@ ul {
   margin: 1rem 0;
 }
 .section-hero__content--image {
-  height: max-content;
+  height: 45rem;
   margin-top: 2rem;
+}
+.section-hero__content--image div {
+  height: 100%;
 }
 .section-hero__content--image img {
   height: 45rem;
@@ -504,6 +507,8 @@ ul {
   color: #ffffff;
   background-color: #125496;
   border: 2px solid #125496;
+  transition-timing-function: ease-in;
+  transition-duration: 0.5s;
 }
 
 .footer {
@@ -575,4 +580,99 @@ ul {
 }
 .btn-top:hover {
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+.product-details {
+  padding: 3rem 7rem;
+  width: 100%;
+}
+.product-details .product-contents {
+  display: flex;
+  justify-content: space-between;
+}
+.product-details .product-contents .image-slider {
+  width: 50rem;
+  height: 50rem;
+  position: relative;
+  background-size: cover;
+}
+.product-details .product-contents .image-slider .product-images {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  background: #383;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  height: 7rem;
+  grid-gap: 1rem;
+  padding: 1rem;
+}
+.product-details .product-contents .image-slider .product-images img {
+  width: 100%;
+  height: 8rem;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.product-images img.active {
+  opacity: 0.8;
+}
+
+.details {
+  width: 50%;
+  display: block;
+}
+.details .product-description {
+  font-size: 2.5rem;
+  height: auto;
+  margin: 1rem 0;
+  color: #125496;
+}
+.details .properties {
+  margin-left: 2rem;
+}
+.details .properties li {
+  list-style: circle;
+  padding-top: 0.5rem;
+}
+.details .product-price {
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+.details .product-actual-price {
+  font-size: 2.5rem;
+  opacity: 0.8;
+  text-decoration: line-through;
+  margin: 0 1.5rem;
+  font-weight: 300;
+}
+.details .product-discount {
+  color: #ec425b;
+}
+
+.btn-sizes {
+  display: flex;
+  align-items: center;
+}
+.btn-sizes .size-radio-btn {
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+  font-size: 2rem;
+  border: 1px solid #125496;
+  border-radius: 50%;
+  margin: 1rem;
+  margin-left: 0;
+  line-height: 5rem;
+  text-transform: uppercase;
+  color: #125496;
+  cursor: pointer;
+}
+.btn-sizes .check {
+  background: #125496;
+  color: #fff;
 }

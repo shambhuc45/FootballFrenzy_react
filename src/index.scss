@@ -1,9 +1,12 @@
 @import "./components/sass/mixins";
 @import "./components/sass/variables";
 @import "./components/sass/navbar";
-@import "./components/sass/herosection";
-@import "./components/sass/servicecard";
-@import "./components/sass/categories";
-@import "./components/sass/productCard";
-@import "./components/sass/requestform";
+@import "./components/sass/home/herosection";
+@import "./components/sass/home/servicecard";
+@import "./components/sass/home/categories";
+@import "./components/sass/home/productCard";
+@import "./components/sass/home/requestform";
 @import "./components/sass/footer";
+@import "./components/sass/product/imageCarousel";
+@import "./components/sass/product/productDetails";
+@import "./components/sass/product/sizeButtons";

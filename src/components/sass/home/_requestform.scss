@@ -59,6 +59,8 @@
             color: #ffffff;
             background-color: $color-primary;
             border: 2px solid $color-primary;
+            transition-timing-function: ease-in;
+            transition-duration: 0.5s;
           }
         }
       }
