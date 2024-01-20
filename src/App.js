@@ -1,15 +1,18 @@
 import Home from "./components/pages/Home";
 import Layout from "./components/Layout";
 import Router from "./components/Router/Router";
+import { SearchProvider } from "./components/pages/search/SearchContext";
 
 function App() {
   return (
     <>
-      <Router>
-        <Layout>
-          <Home />
-        </Layout>
-      </Router>
+      <SearchProvider>
+        <Router>
+          <Layout>
+            <Home />
+          </Layout>
+        </Router>
+      </SearchProvider>
     </>
   );
 }

@@ -9,7 +9,8 @@ export default function Router() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/product" element={<Product />} />
+          <Route path="/product/:id" element={<Product />} />
+          {/* <Route path="/search/" element={<Product />} /> */}
         </Routes>
       </BrowserRouter>
     </>

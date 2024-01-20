@@ -28,7 +28,7 @@ export default function ProductDetails({
       <div className="product-size-selector">
         <p className="product-sub-heading">Select Size</p>
         <div className="btn-sizes">
-          {sizes.map((size, index) => (
+          {sizes.map((size) => (
             <div key={size} className="btn-size">
               <input
                 type="radio"
@@ -42,7 +42,7 @@ export default function ProductDetails({
               <label
                 htmlFor={`${size}-size`}
                 className={`size-radio-btn ${
-                  index === 0 || selectedSize === size ? "check" : ""
+                  selectedSize === size ? "check" : ""
                 }`}
               >
                 {size}

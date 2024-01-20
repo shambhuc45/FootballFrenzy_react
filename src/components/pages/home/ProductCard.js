@@ -4,13 +4,16 @@ import { Icon } from "@iconify/react";
 export default function ProductCard(props) {
   return (
     <>
-      <div className="product__card">
+      <div
+        className="product__card"
+        onClick={() => props.onClick(props.productDetails)}
+      >
         <div className="product__card--image relative">
           <img src={props.src} alt="Arsenal" />
           <span className="tag absolute">SALE!</span>
         </div>
         <div className="product__card--info">
-          <p className="product-name">{props.name}</p>
+          <p className="product-productTitle">{props.productTitle}</p>
           <span className="actual-price">NPR.{props.actualPrice}</span>
           <span className="price">NPR.{props.price}</span>
           <br />
