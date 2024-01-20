@@ -1,0 +1,69 @@
+.section-requestForm {
+  height: 80vh;
+
+  .request {
+    background-image: linear-gradient(
+        115deg,
+        rgba(#fff, 0.9) 0%,
+        rgba(#fff, 0.9) 50%,
+        transparent 50%
+      ),
+      url("./footballpitch.jpg");
+    background-size: 100%;
+    height: 65vh;
+    border-radius: 3px;
+    box-shadow: 0 1.5 4rem rgba(#000000, 0.9);
+    border: 2px solid $color-primary;
+    &-form {
+      width: 50%;
+      padding: 6rem;
+
+      .form {
+        .form-group {
+          .form-input {
+            padding: 0.5rem 0.25rem;
+            border-radius: 2px;
+            background-color: rgba(#ffffff, 0.5);
+            border: 2px solid $color-primary;
+            font-family: "Poppins", sans-serif;
+
+            &:focus-visible {
+              outline: none;
+              border: 2px solid $color-primary;
+            }
+          }
+
+          .textbox {
+            width: 65%;
+            height: 3rem;
+
+            &::placeholder {
+              font-family: "Poppins", sans-serif;
+            }
+          }
+          .textarea-description {
+            width: 65%;
+
+            &::placeholder {
+              font-family: "Poppins", sans-serif;
+            }
+          }
+          .product-picture {
+            width: 65%;
+          }
+        }
+        .btn-request {
+          margin-top: 2rem;
+
+          &:hover {
+            color: #ffffff;
+            background-color: $color-primary;
+            border: 2px solid $color-primary;
+            transition-timing-function: ease-in;
+            transition-duration: 0.5s;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "productImages": [
+          "images/arsenal.png",
+          "barcaH/default.jpg",
+          "barcaH/front.png",
+          "barcaH/frontzoom.png",
+          "barcaH/back.png",
+          "barcaH/side.png",
+          "barcaH/side2.png"
+        ],
+        "productTitle": "Arsenal Modified Jersey",
+        "productDescription": [
+          "Nike Dri-FIT technology",
+          "La Liga logo patch on the right sleeve.",
+          "High-stretch, quick-drying fabric",
+          "100% recycled polyester",
+          "Colour: Blue and scarlet."
+        ],
+        "category": ["allJersey", "topSelling"],
+        "actualPrice": 2100,
+        "price": 1700,
+        "rating": 5,
+        "discount": "15%"
+      },
+      {
+        "id": 2,
+        "productImages": ["images/barca home.png"],
+        "productTitle": "Barcelona Home 23/24",
+        "productDescription": [
+          "Nike Dri-FIT technology",
+          "La Liga logo patch on the right sleeve.",
+          "High-stretch, quick-drying fabric",
+          "100% recycled polyester",
+          "Colour: Blue and scarlet."
+        ],
+        "category": ["allJersey", "topSelling", "featured"],
+        "actualPrice": 2200,
+        "price": 1800,
+        "rating": 5,
+        "discount": "15%"
+      },
+      {
+        "id": 3,
+        "productImages": ["images/barca home.png"],
+        "productTitle": "Barcelona Home 23/24",
+        "productDescription": [
+          "Nike Dri-FIT technology",
+          "La Liga logo patch on the right sleeve.",
+          "High-stretch, quick-drying fabric",
+          "100% recycled polyester",
+          "Colour: Blue and scarlet."
+        ],
+        "category": ["allJersey", "topSelling", "featured"],
+        "actualPrice": 2200,
+        "price": 1800,
+        "rating": 5,
+        "discount": "15%"
+      },
+      {
+        "id": 4,
+        "productImages": ["images/barca home.png"],
+        "productTitle": "Barcelona Home 23/24",
+        "productDescription": [
+          "Nike Dri-FIT technology",
+          "La Liga logo patch on the right sleeve.",
+          "High-stretch, quick-drying fabric",
+          "100% recycled polyester",
+          "Colour: Blue and scarlet."
+        ],
+        "category": ["allJersey", "topSelling", "featured"],
+        "actualPrice": 2200,
+        "price": 1800,
+        "rating": 5,
+        "discount": "15%"
+      },
+      {
+        "id": 5,
+        "productImages": ["images/barca home.png"],
+        "productTitle": "Barcelona Home 23/24",
+        "productDescription": [
+          "Nike Dri-FIT technology",
+          "La Liga logo patch on the right sleeve.",
+          "High-stretch, quick-drying fabric",
+          "100% recycled polyester",
+          "Colour: Blue and scarlet."
+        ],
+        "category": ["allJersey", "topSelling", "featured"],
+        "actualPrice": 2200,
+        "price": 1800,
+        "rating": 5,
+        "discount": "15%"
+      },
+      {
+        "id": 6,
+        "productImages": ["images/barca home.png"],
+        "productTitle": "Barcelona Home 23/24",
+        "productDescription": [
+          "Nike Dri-FIT technology",
+          "La Liga logo patch on the right sleeve.",
+          "High-stretch, quick-drying fabric",
+          "100% recycled polyester",
+          "Colour: Blue and scarlet."
+        ],
+        "category": ["allJersey", "graphicTees", "featured"],
+        "actualPrice": 2200,
+        "price": 1800,
+        "rating": 5,
+        "discount": "15%"
+      },
+      {
+        "id": 7,
+        "productImages": ["images/barca home.png"],
+        "productTitle": "Barcelona Home 23/24",
+        "productDescription": [
+          "Nike Dri-FIT technology",
+          "La Liga logo patch on the right sleeve.",
+          "High-stretch, quick-drying fabric",
+          "100% recycled polyester",
+          "Colour: Blue and scarlet."
+        ],
+        "category": ["allJersey", "graphicTees", "featured"],
+        "actualPrice": 2200,
+        "price": 1800,
+        "rating": 0,
+        "discount": "15%"
+      }
+    ]
+  }
+  

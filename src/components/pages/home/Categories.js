@@ -1,9 +1,13 @@
 import React, { useEffect, useMemo, useState } from "react";
 import ProductCard from "./ProductCard";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export default function Categories() {
   const [activeBtn, setActiveBtn] = useState("featured");
+  const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const navigate = useNavigate();
   const buttonData = useMemo(
     () => [
       {
@@ -33,124 +37,18 @@ export default function Categories() {
     ],
     []
   );
-  const products = useMemo(
-    () => [
-      {
-        image: "images/arsenal.png",
-        name: "Arsenal Modified Jersey",
-        category: ["allJersey", "topSelling"],
-        actualPrice: 2100,
-        price: 1700,
-        rating: 5,
-      },
-      {
-        image: "images/barca home.png",
-        name: "Barcelona Home 23/24",
-        category: ["allJersey", "topSelling", "featured"],
-        actualPrice: 2200,
-        price: 1800,
-        rating: 5,
-      },
-      {
-        image: "images/barca home.png",
-        name: "Barcelona Home 23/24",
-        category: ["allJersey", "topSelling", "featured"],
-        actualPrice: 2200,
-        price: 1800,
-        rating: 5,
-      },
-      {
-        image: "images/barca home.png",
-        name: "Barcelona Home 23/24",
-        category: ["allJersey", "topSelling", "featured"],
-        actualPrice: 2200,
-        price: 1800,
-        rating: 5,
-      },
-      {
-        image: "images/barca home.png",
-        name: "Barcelona Home 23/24",
-        category: ["allJersey", "topSelling", "featured"],
-        actualPrice: 2200,
-        price: 1800,
-        rating: 5,
-      },
-      {
-        image: "images/barca home.png",
-        name: "Barcelona Home 23/24",
-        category: ["allJersey", "graphicTees", "featured"],
-        actualPrice: 2200,
-        price: 1800,
-        rating: 5,
-      },
-      {
-        image: "images/barca home.png",
-        name: "Barcelona Home 23/24",
-        category: ["allJersey", "graphicTees", "featured"],
-        actualPrice: 2200,
-        price: 1800,
-        rating: 0,
-      },
-      {
-        image: "images/barca home.png",
-        name: "Barcelona Home 23/24",
-        category: ["allJersey", "graphicTees", "featured"],
-        actualPrice: 2200,
-        price: 1800,
-        rating: 5,
-      },
-      {
-        image: "images/barca home.png",
-        name: "Barcelona Home 23/24",
-        category: ["graphicTees", "topSelling", "featured"],
-        actualPrice: 2200,
-        price: 1800,
-        rating: 5,
-      },
-      {
-        image: "images/barca home.png",
-        name: "Barcelona Home 23/24",
-        category: ["phoneCase", "topSelling", "featured"],
-        actualPrice: 2200,
-        price: 1800,
-        rating: 1,
-      },
-      {
-        image: "images/barca home.png",
-        name: "Barcelona Home 23/24",
-        category: ["ornaments", "topSelling", "featured"],
-        actualPrice: 2200,
-        price: 1800,
-        rating: 5,
-      },
-      {
-        image: "images/barca home.png",
-        name: "Barcelona Home 23/24",
-        category: ["phoneCase", "topSelling"],
-        actualPrice: 2200,
-        price: 1800,
-        rating: 2,
-      },
-      {
-        image: "images/barca home.png",
-        name: "Barcelona Home 23/24",
-        category: ["Ornaments", "topSelling"],
-        actualPrice: 2200,
-        price: 1800,
-        rating: 3,
-      },
-      {
-        image: "images/barca home.png",
-        name: "Barcelona Home 23/24",
-        category: ["phoneCase", "topSelling"],
-        actualPrice: 2200,
-        price: 1800,
-        rating: 4,
-      },
-    ],
-    []
-  );
+  const fetchProducts = async () => {
+    try {
+      const response = await axios.get("http://localhost:3001/products");
+      setProducts(response.data);
+      console.log("prouct are" + products);
+    } catch (error) {
+      console.error("Error fetching products:", error);
+    }
+  };
+
   useEffect(() => {
+    fetchProducts();
     const initialFilteredProducts = products.filter((product) =>
       product.category.includes("featured")
     );
@@ -162,6 +60,9 @@ export default function Categories() {
     );
     setFilteredProducts(filtered);
   }, [activeBtn, products]);
+  const handleProductClick = (product) => {
+    navigate(`/product/${product.id}`, { state: { productDetails: product } });
+  };
   return (
     <>
       <section className="categories row">
@@ -181,14 +82,16 @@ export default function Categories() {
             ))}
           </div>
           <div className="product flex">
-            {filteredProducts.map((product, index) => (
+            {filteredProducts.map((product) => (
               <ProductCard
-                key={index}
-                src={product.image}
-                name={product.name}
+                key={product.id}
+                src={product.productImages[0]}
+                productTitle={product.productTitle}
                 actualPrice={product.actualPrice}
                 price={product.price}
                 rating={product.rating}
+                onClick={handleProductClick}
+                productDetails={product}
               />
             ))}
           </div>

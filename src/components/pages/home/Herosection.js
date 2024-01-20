@@ -24,7 +24,7 @@ export default function Herosection() {
         <div className="section-hero__content">
           <div className="section-hero__content--text col-50">
             <hr className="hor-line-about hor-line-small" />
-            <h1 className="about-heading">
+            <h1 className=" heading-primary">
               The Premium Product with pleasure.
             </h1>
             <div className="typewriter">

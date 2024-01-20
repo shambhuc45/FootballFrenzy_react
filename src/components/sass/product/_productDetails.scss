@@ -1,0 +1,34 @@
+.details {
+  width: 50%;
+  display: block;
+
+  .product-description {
+    font-size: 2.5rem;
+    height: auto;
+    margin: 1rem 0;
+    color: $color-primary;
+  }
+
+  .properties {
+    margin-left: 2rem;
+    li {
+      list-style: circle;
+      padding-top: 0.5rem;
+    }
+  }
+
+  .product-price {
+    font-weight: 600;
+    font-size: 2.5rem;
+  }
+  .product-actual-price {
+    font-size: 2.5rem;
+    opacity: 0.8;
+    text-decoration: line-through;
+    margin: 0 1.5rem;
+    font-weight: 300;
+  }
+  .product-discount {
+    color: $color-secondary;
+  }
+}

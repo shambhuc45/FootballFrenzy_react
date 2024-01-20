@@ -1,8 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Icon } from "@iconify/react";
+import { useSearch } from "./pages/search/SearchContext";
 
 export default function Navbar() {
+  const navigate = useNavigate();
+  const { searchQuery, updateSearchQuery } = useSearch();
+
+  const handleSearch = () => {
+    navigate(`/search?search=${searchQuery}`);
+  };
   return (
     <>
       <div className="navigation">
@@ -19,8 +26,11 @@ export default function Navbar() {
                 type="text"
                 className="search-box"
                 placeholder="Search Item Here"
+                onChange={(e) => updateSearchQuery(e.target.value)}
               ></input>
-              <button className="search-btn">Search</button>
+              <button className="search-btn" onClick={handleSearch}>
+                Search
+              </button>
             </div>
             <Link to="/">
               <Icon className="icons" icon="bytesize:cart" width="3.5rem" />
