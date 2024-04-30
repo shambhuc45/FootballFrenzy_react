@@ -39,7 +39,7 @@ body {
 }
 
 .row {
-  padding: 0 7rem;
+  padding: 0 10rem;
 }
 
 .relative {
@@ -240,10 +240,10 @@ ul {
 .section-hero {
   height: max-content;
   width: 100%;
-  height: 80vh;
+  height: 90vh;
 }
 .section-hero__content {
-  padding: 0 8rem;
+  padding: 0 10rem;
 }
 .section-hero__content--text .about__content--btn {
   margin: 1rem 0;
@@ -415,7 +415,7 @@ ul {
 .product__card--info {
   text-align: center;
 }
-.product__card--info .product-name {
+.product__card--info .product-productTitle {
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;

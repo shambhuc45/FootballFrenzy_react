@@ -39,9 +39,9 @@ export default function Categories() {
   );
   const fetchProducts = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/products");
+      const response = await axios.get("http://localhost:3000/products");
       setProducts(response.data);
-      console.log("prouct are" + products);
+      console.log("product are" + products);
     } catch (error) {
       console.error("Error fetching products:", error);
     }
@@ -61,7 +61,7 @@ export default function Categories() {
     setFilteredProducts(filtered);
   }, [activeBtn, products]);
   const handleProductClick = (product) => {
-    navigate(`/product/${product.id}`, { state: { productDetails: product } });
+    navigate(`/product/${product.id}`);
   };
   return (
     <>
